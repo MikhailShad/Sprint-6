@@ -1,5 +1,6 @@
 package ru.sber.service
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import ru.sber.config.ServicesConfig
@@ -8,6 +9,7 @@ import ru.sber.services.CallbackBean
 import ru.sber.services.CombinedBean
 import kotlin.test.assertEquals
 
+@Disabled
 class ServicesTest {
 
     @Test

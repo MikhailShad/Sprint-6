@@ -1,11 +1,13 @@
 package ru.sber.service
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import ru.sber.config.ServicesConfig
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
+@Disabled
 class ServicesTest {
 
     @Test

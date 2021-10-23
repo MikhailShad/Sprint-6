@@ -69,8 +69,8 @@ public class FileServerTest extends TestCase {
         final ServerSocket socket = new ServerSocket(port);
         socket.setReuseAddress(true);
         final VFilesystem fs = getFilesystem();
-        
-        Runnable runner = new Runnable () {
+
+        Runnable runner = new Runnable() {
             @Override
             public void run() {
                 try {

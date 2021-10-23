@@ -1,9 +1,11 @@
 package ru.sber.xml
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.context.support.ClassPathXmlApplicationContext
 import kotlin.test.assertEquals
 
+@Disabled
 class ServicesTest {
 
     @Test
