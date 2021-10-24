@@ -14,6 +14,7 @@ class FirstQualifierServiceImpl : QualifierInterface {
 }
 
 @Component
+@Qualifier("onlySecondService")
 class SecondQualifierServiceImpl : QualifierInterface {
     override fun toString(): String {
         return "SecondQualifierServiceImpl"
