@@ -1,0 +1,61 @@
+name: Kotlin CI with Maven
+
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  spring-bean-lifecycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-bean-lifecycle tests
+        run: mvn -B clean verify --file spring-bean-lifecycle/pom.xml
+
+  spring-bean-scope:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-bean-scope tests
+        run: mvn -B clean verify --file spring-bean-scope/pom.xml
+
+  spring-dependency-injection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-dependency-injection tests
+        run: mvn -B clean verify --file spring-dependency-injection/pom.xml
+
+  spring-java-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-java-config tests
+        run: mvn -B clean verify --file spring-java-config/pom.xml
+
+  spring-mvc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-mvc tests
+        run: mvn -B clean verify --file spring-mvc/pom.xml
+
+  spring-xml-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run spring-xml-config tests
+        run: mvn -B clean verify --file spring-xml-config/pom.xml
+
+  webserver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - name: Run webserver tests
+        run: mvn -B clean verify --file webserver/pom.xml
