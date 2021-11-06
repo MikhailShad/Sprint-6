@@ -8,8 +8,9 @@ import org.springframework.core.type.AnnotatedTypeMetadata
 import org.springframework.stereotype.Component
 
 class ProdProfileCondition : Condition {
+
     override fun matches(context: ConditionContext, metadata: AnnotatedTypeMetadata): Boolean {
-        return context.environment.activeProfiles.contains("qa")
+        return context.environment.activeProfiles.contains("prod")
     }
 }
 
@@ -18,24 +19,30 @@ interface ConditionalInterface
 @Component
 @Conditional(ProdProfileCondition::class)
 class ConditionalService : ConditionalInterface {
+
     override fun toString(): String {
         return "ConditionalService"
     }
+
 }
 
 @Component
 class AnotherConditionalService : ConditionalInterface {
+
     override fun toString(): String {
         return "AnotherConditionalService"
     }
+
 }
 
 @Component
 class ConditionalBeanInjectionService {
+
     @Autowired
     private lateinit var conditionalService: ConditionalInterface
 
     override fun toString(): String {
         return "ConditionalBeanInjectionService(conditionalService=$conditionalService)"
     }
+
 }
